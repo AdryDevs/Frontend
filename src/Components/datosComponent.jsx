@@ -8,7 +8,7 @@ import axios from 'axios';
 
 const DatosComponent = () => {
 
-    const API = 'http://127.0.0.1:3000/';
+    const API = 'http://localhost:3000/formdata/';
 
     const [datos, setDatos] = useState([]);
 
@@ -27,16 +27,12 @@ const DatosComponent = () => {
         return datos._id;
     });
 
-    const codigo_postal = datos.map((datos) => {
-        return datos.codigo_postal;
+    const nombre = datos.map((datos) => {
+        return datos.nombre;
     });
 
-    const municipio_nombre = datos.map((datos) => {
-        return datos.municipio_nombre;
-    });
-
-    const municipio_id = datos.map((datos) => {
-        return datos.municipio_id;
+    const documento = datos.map((datos) => {
+        return datos.documento;
     });
 
     return (
